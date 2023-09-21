@@ -41,12 +41,8 @@ public class CacheDataProcessor {
         String line;
         Map<String, Rating> map = new HashMap<>();
         try (BufferedReader br = bufferedFile.getBufferedReader(path)) {
-            boolean firstLine = true;
+            br.readLine();
             while ((line = br.readLine()) != null) {
-                if (firstLine) {
-                    firstLine = false;
-                    continue;
-                }
                 String[] fields = line.split("\t");
                 float avgRate = Float.parseFloat(fields[1]);
                 int numVotes = Integer.parseInt(fields[2]);
@@ -62,12 +58,10 @@ public class CacheDataProcessor {
         List<Integer> list = new ArrayList<>();
         try (BufferedReader br = bufferedFile.getBufferedReader(path)) {
             String line;
-            int lineNum = 0;
+            int lineNum = 1;
+            br.readLine();
             while ((line = br.readLine()) != null) {
                 lineNum++;
-                if (lineNum == 1) {
-                    continue;
-                }
                 String[] fields = line.split("\t");
                 if (fields[1].equalsIgnoreCase(fields[2]) && !fields[1].equalsIgnoreCase("\\N")
                         && !fields[2].equalsIgnoreCase("\\N")) {
@@ -84,12 +78,10 @@ public class CacheDataProcessor {
         List<Integer> list = new ArrayList<>();
         try (BufferedReader br = bufferedFile.getBufferedReader(path)) {
             String line;
-            int lineNum = 0;
+            int lineNum = 1;
+            br.readLine();
             while ((line = br.readLine()) != null) {
                 lineNum++;
-                if (lineNum == 1) {
-                    continue;
-                }
                 if (line.contains("actor")) {
                     list.add(lineNum);
                 }
