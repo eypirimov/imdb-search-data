@@ -11,6 +11,7 @@ Use IMDB Dataset in order to develop these functionalities using Java 8+ and exp
 5. Count how many HTTP requests you received in this application since the last startup 
 
 Considerations:
+
   1.You Don’t have to use any external database application but if you want to just use them in in-memory mode, your application should run standalone
   2.You are free to use any web framework you like but if you choose anything other than Spring Boot you need to explain why
   3.Do not implement any UI
