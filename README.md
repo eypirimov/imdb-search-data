@@ -1,6 +1,6 @@
 # imdb-search-data
 
-The app developed on the requarments
+The app developed on the requirements
 
 Use IMDB Dataset in order to develop these functionalities using Java 8+ and expose proper RESTful HTTP APIs : 
 
